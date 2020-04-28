@@ -8,7 +8,7 @@ else:
 
 print(f"Last digit of {number} is {last}", end="")
 if last > 5:
-	print("and is greater than 5")
+	print(" and is greater than 5")
 elif last == 0:
 	print(" and is 0")
 else:
