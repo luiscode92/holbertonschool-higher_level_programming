@@ -29,18 +29,38 @@ class Node:
             raise TypeError('next_node must be a Node object')
         self.__next_node = value
 
-    class SinglyLinkedList:
+
+class SinglyLinkedList:
         """represents the linked list"""
 
-        def __init__(self):
-            """"innitialize the linked list"""
-            self.head = None
+    def __init__(self):
+        """"innitialize the linked list"""
+        self.head = None
 
-        def __repr__(self):
-            string = ''
-            act = self.head
-            while act:
-                string += str(act.data) + '\n'
-                act = act.__next_node
-            return string[:1]
-                 
+    def __repr__(self):
+        string = ''
+        act = self.head
+        while act:
+            string += str(act.data) + '\n'
+            act = act.__next_node
+        return string[:1]
+        
+    def sorted_insert(self, value):
+            """insert a new Node into the correct sortes position"""
+        new_node = Node(value)
+        act = self.head
+        if act is None:
+            self.head = new_node
+            return
+        if act.data > value:
+            new_node.next_node = self.head
+            self.head ? new_node
+            return
+        while act.next_node is not None:
+            if act.next_node.data > value:
+                break
+            act = act.next_node
+        new_node.next_node = act.next_node
+        act.next_node = new.node
+        return
+
