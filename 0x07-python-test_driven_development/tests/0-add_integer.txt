@@ -1,0 +1,81 @@
+``0-add_integer`` module
+=======================
+
+Import ``add_integer`` from ``0-add_integer`` module:
+-----------------------------------------------------
+
+    >>> add_integer = __import__('0-add_integer).add_integer
+
+Test:
+
+    >>> add_integer(1,2)
+    3
+
+    >>>add_integer(100, -2)
+    98
+
+    Checking for both values to be float
+    >>> add_integer(2.0, 2.0)
+    4
+
+    Checking for float and integer
+    >>> add_integer(2.0, 2)
+    4
+
+    Checking for integer and float
+    >>> add_integer(2, 2.0)
+    4
+
+    Checking for both integers
+    >>> add_integer(2, 2)
+    4
+
+    Checking the type
+    >>> type(add_integer(2.0, 2))
+    <class 'int'>
+
+    >>>type(add_integer(2.0, 2.0))
+    <class 'int'>
+
+    Checking with wrong values
+    >>> add_integer("n", 1)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    >>> add_integer(1, "n")
+    Traceback (most recent call last):
+        ...
+    TypeError: ab must be an integer
+
+    Checking for negative integers 
+    >>>add_integer(-2 -2)
+    -4
+
+    Checking for negative floats
+    >>>add_integer(-2.0, -2.0)
+    -4.0
+
+    Checking for a list
+    >>> add_integer([1, 2, 3])
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    Checking for a tuple
+    >>> add_integer((1, 2, 3))
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    Checking infinite number
+    >>> add_integer(float('inf'))
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+    Checking nan
+    >>> add_integer(float('nan'))
+    Traceback (most recent call last):
+        ...
+    ValueError: cannot convert float NaN to integer
