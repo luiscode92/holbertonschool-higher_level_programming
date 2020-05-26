@@ -43,7 +43,7 @@ class Rectangle:
     def __str__(self):
         total = ""
         for i in range(self.__height):
-            for i in range(self.__width):
+            for j in range(self.__width):
                 try:
                     total += str(self.print_symbol)
                 except Exception:
