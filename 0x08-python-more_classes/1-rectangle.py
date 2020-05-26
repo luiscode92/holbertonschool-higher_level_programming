@@ -2,7 +2,7 @@
 class Rectangle:
     """Represents a rectangle."""
     def __init__(self, width=0, height=0):
-        """Initialize the data."""
+        
         self.width = width
         self.height = height
 
