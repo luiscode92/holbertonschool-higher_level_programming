@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """
-Read file module
+The "read file" module.
+
+Read file module defines one function, read_file().
 """
 
 
