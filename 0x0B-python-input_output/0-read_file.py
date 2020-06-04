@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 """
-The "read file" module.
-
-Read file module defines one function, read_file().
+This is the "read file" module.
+The read file module defines one function, read_file().
 """
 
 
 def read_file(filename=""):
-    """Print content of text file"""
+    """Print the contents of a text file."""
     with open(filename, 'r') as f:
         print(f.read(), end='')
