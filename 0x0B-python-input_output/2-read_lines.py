@@ -14,4 +14,4 @@ def read_lines(filename="", nb_lines=0):
         for line in f:
             if count < nb_lines:
                 print(line, end='')
-            count += 1        
+            count += 1
