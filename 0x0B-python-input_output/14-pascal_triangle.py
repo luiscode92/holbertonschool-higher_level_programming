@@ -13,7 +13,7 @@ def pascal_triangle(n):
         value = 1
         tmp_list = []
         for j in range(1, i + 1):
-            tmp_list.append(str(value)) 
+            tmp_list.append(str(value))
             value = value * (i - j) // j
         my_list.append(tmp_list)
-    return my_list           
+    return my_list
