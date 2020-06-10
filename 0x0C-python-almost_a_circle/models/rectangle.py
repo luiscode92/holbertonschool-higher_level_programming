@@ -36,7 +36,7 @@ class Rectangle(Base):
         if value <= 0 and (attr == 'width' or attr == 'height'):
             raise ValueError('{} must be > 0'.format(attr))
         if value < 0 and (attr == 'x' or attr == 'y'):
-            raise ValueError('{} must be >=0'.format(attr))
+            raise ValueError('{} must be >= 0'.format(attr))
 
     def area(self):
         """represents the area of a triangle"""
@@ -96,12 +96,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """get the x"""
-        return self.__X
+        """Get x."""
+        return self.__x
 
     @x.setter
     def x(self, value):
-        """set the x"""
+        """Set x."""
         self.integer_validator('x', value)
         self.__x = value
 
