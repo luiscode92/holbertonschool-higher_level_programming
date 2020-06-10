@@ -18,7 +18,16 @@ class Rectangle(Base):
 
     def __str__(self):
         """print rectangle attributes"""
-        return ('[Rectangle] (' + str(self.id) + ') ' + str(self.__x) + '/' + str(self.__y) + ' - ' + str(self.__width) + '/' + str(self.__height))
+        return ('[Rectangle] (' +
+                str(self.id) +
+                ') ' +
+                str(self.__x) +
+                '/' +
+                str(self.__y) +
+                ' - ' +
+                str(self.__width) +
+                '/' +
+                str(self.__height))
 
     def integer_validator(self, attr, value):
         """validate integer"""
@@ -105,4 +114,4 @@ class Rectangle(Base):
     def y(self, value):
         """set the y"""
         self.integer_validator('y', value)
-        self.__y = value  
+        self.__y = value
