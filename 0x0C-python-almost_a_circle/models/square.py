@@ -14,7 +14,14 @@ class Square(Rectangle):
 
     def __str__(self):
         """print square sttr"""
-        return ('[Square] (' + str(self.id) + ') ' + str(self._Rectangle__x) + '/' + str(self._Rectangle__y) + ' - ' + str(self._Rectangle__width))
+        return ('[Square] (' +
+                str(self.id) +
+                ') ' +
+                str(self._Rectangle__x) +
+                '/' +
+                str(self._Rectangle__y) +
+                ' - ' +
+                str(self._Rectangle__width))
 
     @property
     def size(self):
@@ -46,8 +53,8 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """return dictionary rep of rectangle"""
-        return {'id': self.id, 'size': self.size, 'x': self._Rectangle__x, 'y': self._Rectangle__y}
-
-
-
-
+        return {
+            'id': self.id,
+            'size': self.size,
+            'x': self._Rectangle__x,
+            'y': self._Rectangle__y}

@@ -19,7 +19,7 @@ class Rectangle(Base):
         """validate integer"""
         if type(value) != int:
             raise TypeError('{} must be an integer'.format(attr))
-        if value <= 0 and (attr == 'width'or attr =='height'):
+        if value <= 0 and (attr == 'width' or attr == 'height'):
             raise ValueError('{} must be > 0'.format(attr))
         if value < 0 and (attr == 'x' or attr == 'y'):
             raise ValueError('{} must be >=0'.format(attr))
@@ -70,16 +70,25 @@ class Rectangle(Base):
 
     def area(self):
         """represents the area of a triangle"""
-        return self.__width *self.__height
+        return self.__width * self.__height
 
     def display(self):
         """print the rectangle"""
-        print('\n' * self.__y + (' ' * self.__x + '#' * self.__width + '\n')* self.__height, end="")
+        print('\n' * self.__y + (' ' * self.__x + '#' * self.__width + '\n') * self.__height, end="")
 
     def __str__(self):
         """print rectangle attributes"""
-        return ('[Rectangle] (' + str(self.id) + ') ' + str(self.__x) + '/' + str(self.__y) + ' - ' + str(self.__width) + '/' + str(self.__height))
-        
+        return ('[Rectangle] (' +
+                str(self.id) +
+                ') ' +
+                str(self.__x) +
+                '/' +
+                str(self.__y) +
+                ' - ' +
+                str(self.__width) +
+                '/' +
+                str(self.__height))
+
     def update(self, *args, **kwargs):
         """assigns an argument to each attribute"""
         if args:
@@ -99,5 +108,9 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """return dictionary rep of rectangle"""
-        return {'id': self.id, 'width': self.__width, 'height': self.__height, 'x': self.__x, 'y': self.__y}
-
+        return {
+            'id': self.id,
+            'width': self.__width,
+            'height': self.__height,
+            'x': self.__x,
+            'y': self.__y}
