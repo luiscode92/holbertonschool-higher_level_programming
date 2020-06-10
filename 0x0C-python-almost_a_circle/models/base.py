@@ -34,3 +34,11 @@ class Base:
             dictionary = [obj.to_dictionary() for obj in list_objs]
         with open(filename, 'w') as f:
             f.write(cls.to_json_string(dictionary))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """retun the list of the json string rep"""
+        if not json_string or json_string is None:
+            return []
+        return json.loads(json_string)
+        
